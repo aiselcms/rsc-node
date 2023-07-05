@@ -9,7 +9,7 @@ const verifyResponse = (trueAnswer, solution, trail, tolerance) => verifySolutio
     verifyTrailLength(trail) &&
     verifyHorizontalMotion(trail.x) &&
     verifyVerticalMotion(trail.y);
-const verifyCaptcha = (trueAnswer, captchaResult, options) => {
+const verifyCaptcha = (trueAnswer, captchaResult, options = { tolerance: 7, verify: verifyResponse }) => {
     if (options.verify(trueAnswer, captchaResult.response, captchaResult.trail, options.tolerance)) {
         const token = (0, uuid_1.v4)();
         return { result: true, token: token };

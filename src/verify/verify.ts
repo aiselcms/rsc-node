@@ -61,7 +61,7 @@ const verifyResponse = (
 const verifyCaptcha = (
   trueAnswer: number,
   captchaResult: CaptchaRequest,
-  options: Options
+  options: Options = { tolerance: 7, verify: verifyResponse }
 ): VerifyResult => {
   if (
     options.verify(

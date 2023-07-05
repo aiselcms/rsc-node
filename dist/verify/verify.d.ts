@@ -14,5 +14,5 @@ export type Options = {
     tolerance: number;
     verify: (trueAnswer: number, solution: number, trail: Trail, tolerance: number) => boolean;
 };
-declare const verifyCaptcha: (trueAnswer: number, captchaResult: CaptchaRequest, options: Options) => VerifyResult;
+declare const verifyCaptcha: (trueAnswer: number, captchaResult: CaptchaRequest, options?: Options) => VerifyResult;
 export default verifyCaptcha;

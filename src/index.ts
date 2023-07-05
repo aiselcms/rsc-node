@@ -1,2 +1,2 @@
-export { default as create } from './create';
-export { default as verify } from './verify';
+export { default as create } from './create/index';
+export { default as verify } from './verify/index';

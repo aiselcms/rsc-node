@@ -12,7 +12,6 @@
     "baseUrl": "./src",
     "types": [
       "node",
-      "jest"
     ],
     "incremental": true,
     "skipLibCheck": true,

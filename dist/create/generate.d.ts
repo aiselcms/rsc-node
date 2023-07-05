@@ -19,4 +19,4 @@ declare const puzzlePieceSvg: ({ distort, rotate, fill, stroke, seed, opacity, s
     opacity?: string;
     strokeWidth?: string;
 }) => string;
-export { puzzlePieceSvg, backgroundSvg, randInt, };
+export { puzzlePieceSvg, backgroundSvg, randInt };

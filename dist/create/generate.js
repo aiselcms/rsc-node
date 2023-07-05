@@ -33,7 +33,7 @@ const svgGridPattern = (width, height, gridWidth, gridHeight, scheme) => {
             matrix[y][x] = svgRect(x * gridWidth, y * gridHeight, gridWidth, gridHeight, scheme[x % 2]);
         }
     }
-    return matrix.map((line) => line.join('')).join('');
+    return matrix.map((line) => line.join("")).join("");
 };
 const backgroundSvg = (width, height, { gridWidth = randInt(5, 50), gridHeight = randInt(5, 50), scheme = randScheme(randInt(0, 360)), seeds = [randInt(), randInt()], } = {}) => {
     return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
@@ -52,13 +52,13 @@ const backgroundSvg = (width, height, { gridWidth = randInt(5, 50), gridHeight =
             </svg>`;
 };
 exports.backgroundSvg = backgroundSvg;
-const puzzlePieceSvg = ({ distort = false, rotate = false, fill = '#000', stroke = '#fff', seed = 0, opacity = '0.5', strokeWidth = '0.25', } = {}) => {
+const puzzlePieceSvg = ({ distort = false, rotate = false, fill = "#000", stroke = "#fff", seed = 0, opacity = "0.5", strokeWidth = "0.25", } = {}) => {
     return `<svg viewBox="0 0 20 20" height="60" width="60">
                 <filter id="noise">
                     <feTurbulence type="turbulence" baseFrequency="0.05" seed="${seed}" numOctaves="2" result="turbulence"/>
                     <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="2.5" xChannelSelector="R" yChannelSelector="G"/>
                 </filter>
-                <path ${distort ? 'filter="url(#noise)"' : ''} ${rotate ? `transform="rotate(${seed}, 10, 10)"` : ''} d="M5.56.56a2.305 2.305 0 00-2.296 2.304 2.305 2.305 0 00.801 1.747H.135v4.295a2.305 2.305 0 011.8-.865 2.305 2.305 0 012.304 2.306 2.305 2.305 0 01-2.305 2.304 2.305 2.305 0 01-1.8-.865v4.226H11.26v-4.258a2.305 2.305 0 001.781.842 2.305 2.305 0 002.305-2.305 2.305 2.305 0 00-2.305-2.305 2.305 2.305 0 00-1.78.841V4.611H7.072a2.305 2.305 0 00.801-1.747A2.305 2.305 0 005.57.559a2.305 2.305 0 00-.009 0z"
+                <path ${distort ? 'filter="url(#noise)"' : ""} ${rotate ? `transform="rotate(${seed}, 10, 10)"` : ""} d="M5.56.56a2.305 2.305 0 00-2.296 2.304 2.305 2.305 0 00.801 1.747H.135v4.295a2.305 2.305 0 011.8-.865 2.305 2.305 0 012.304 2.306 2.305 2.305 0 01-2.305 2.304 2.305 2.305 0 01-1.8-.865v4.226H11.26v-4.258a2.305 2.305 0 001.781.842 2.305 2.305 0 002.305-2.305 2.305 2.305 0 00-2.305-2.305 2.305 2.305 0 00-1.78.841V4.611H7.072a2.305 2.305 0 00.801-1.747A2.305 2.305 0 005.57.559a2.305 2.305 0 00-.009 0z"
                     opacity="${opacity}"
                     stroke="${stroke}"
                     fill="${fill}"

@@ -30,7 +30,7 @@ const verifyCaptcha = async (
   { tolerance = 7, verify = verifyResponse } = {}
 ): Promise<{
   result: string;
-  token: string;
+  token?: string;
 }> =>
   new Promise((resolve) => {
     if (verify(captcha, response, trail, tolerance)) {

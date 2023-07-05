@@ -1,8 +1,11 @@
-declare const verifyCaptcha: (captcha: any, { response, trail, }: {
+declare const verifyCaptcha: (captcha: any, { response, trail }: {
     response: any;
     trail: any;
-}, { tolerance, verify, }?: {
+}, { tolerance, verify }?: {
     tolerance?: number;
     verify?: (captcha: any, solution: any, trail: any, tolerance: any) => boolean;
-}) => Promise<unknown>;
+}) => Promise<{
+    result: string;
+    token?: string;
+}>;
 export default verifyCaptcha;

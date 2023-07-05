@@ -1,4 +1,4 @@
-declare const createCaptcha1: ({ image, distort, rotate, fill, stroke, strokeWidth, opacity, }?: {
+declare const createCaptcha: ({ image, distort, rotate, fill, stroke, strokeWidth, opacity, }?: {
     image?: Buffer;
     distort?: boolean;
     rotate?: boolean;
@@ -13,4 +13,4 @@ declare const createCaptcha1: ({ image, distort, rotate, fill, stroke, strokeWid
     };
     solution: number;
 }>;
-export default createCaptcha1;
+export default createCaptcha;

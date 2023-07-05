@@ -12,17 +12,17 @@ const verifyResponse = (captcha, solution, trail, tolerance) => verifySolution(c
     verifyTrailLength(trail) &&
     verifyHorizontalMotion(trail.x) &&
     verifyVerticalMotion(trail.y);
-const verifyCaptcha = (captcha, { response, trail, }, { tolerance = 7, verify = verifyResponse, } = {}) => new Promise((resolve) => {
+const verifyCaptcha = async (captcha, { response, trail }, { tolerance = 7, verify = verifyResponse } = {}) => new Promise((resolve) => {
     if (verify(captcha, response, trail, tolerance)) {
         (0, uid_safe_1.default)(32).then((token) => {
             resolve({
-                result: 'success',
+                result: "success",
                 token,
             });
         });
     }
     else {
-        resolve({ result: 'failure' });
+        resolve({ result: "failure" });
     }
 });
 exports.default = verifyCaptcha;

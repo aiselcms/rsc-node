@@ -8,8 +8,8 @@ declare const createCaptcha1: ({ image, distort, rotate, fill, stroke, strokeWid
     opacity?: string;
 }) => Promise<{
     data: {
-        background: Buffer;
-        slider: Buffer;
+        background: string;
+        slider: string;
     };
     solution: number;
 }>;

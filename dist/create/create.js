@@ -86,8 +86,8 @@ const createCaptcha1 = async ({ image = Buffer.from((0, generate_1.backgroundSvg
         .toBuffer();
     return {
         data: {
-            background,
-            slider,
+            background: background.toString("base64"),
+            slider: slider.toString("base64"),
         },
         solution: location.left,
     };

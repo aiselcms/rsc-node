@@ -17,7 +17,7 @@ const createCaptcha1 = async ({
   strokeWidth = ".4",
   opacity = "0.5",
 } = {}): Promise<{
-  data: { background: Buffer; slider: Buffer };
+  data: { background: string; slider: string };
   solution: number;
 }> => {
   const seed = randInt();
@@ -112,8 +112,8 @@ const createCaptcha1 = async ({
 
   return {
     data: {
-      background,
-      slider,
+      background: background.toString("base64"),
+      slider: slider.toString("base64"),
     },
     solution: location.left,
   };

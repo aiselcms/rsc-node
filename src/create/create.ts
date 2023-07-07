@@ -9,7 +9,7 @@ const sizes = {
 };
 
 const createCaptcha = async ({
-  image = Buffer.from(backgroundSvg(sizes.WIDTH, sizes.HEIGHT)),
+  image = Buffer.from(backgroundSvg(sizes.WIDTH, sizes.HEIGHT), "base64"),
   rotate = false,
   fill = "#000",
   stroke = "#fff",

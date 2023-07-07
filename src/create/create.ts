@@ -42,6 +42,7 @@ const createCaptcha = async ({
       opacity: "1",
     })
   );
+
   const outline = Buffer.from(
     puzzlePieceSvg({
       rotate,
@@ -52,6 +53,7 @@ const createCaptcha = async ({
       opacity: "1",
     })
   );
+
   const location = {
     // Solution for slider
     left: randInt(

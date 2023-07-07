@@ -37,7 +37,7 @@ const svgGridPattern = (width, height, gridWidth, gridHeight, scheme) => {
     return matrix.map((line) => line.join("")).join("");
 };
 const backgroundSvg = (width, height, { gridWidth = randInt(5, 50), gridHeight = randInt(5, 50), scheme = randScheme(randInt(0, 360)), seeds = [randInt(), randInt()], } = {}) => {
-    return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
+    return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
                 <image
                     width="${width}"
                     height="${height}"

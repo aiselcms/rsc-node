@@ -1,8 +1,3 @@
-export type Color = {
-    h: number;
-    s: number;
-    l: number;
-};
 declare const randInt: (min?: number, max?: number) => number;
 declare const backgroundSvg: (width: number, height: number, { gridWidth, gridHeight, scheme, seeds, }?: {
     gridWidth?: number;
@@ -10,8 +5,7 @@ declare const backgroundSvg: (width: number, height: number, { gridWidth, gridHe
     scheme?: string[];
     seeds?: number[];
 }) => string;
-declare const puzzlePieceSvg: ({ distort, rotate, fill, stroke, seed, opacity, strokeWidth, }?: {
-    distort?: boolean;
+declare const puzzlePieceSvg: ({ rotate, fill, stroke, seed, opacity, strokeWidth, }?: {
     rotate?: boolean;
     fill?: string;
     stroke?: string;

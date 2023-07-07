@@ -1,6 +1,5 @@
-declare const createCaptcha: ({ image, distort, rotate, fill, stroke, strokeWidth, opacity, }?: {
+declare const createCaptcha: ({ image, rotate, fill, stroke, strokeWidth, opacity, }?: {
     image?: Buffer;
-    distort?: boolean;
     rotate?: boolean;
     fill?: string;
     stroke?: string;

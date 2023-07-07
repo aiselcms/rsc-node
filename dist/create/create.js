@@ -11,11 +11,10 @@ const sizes = {
     PUZZLE: 60,
     PADDING: 20,
 };
-const createCaptcha = async ({ image = Buffer.from((0, generate_1.backgroundSvg)(sizes.WIDTH, sizes.HEIGHT)), distort = false, rotate = false, fill = "#000", stroke = "#fff", strokeWidth = ".4", opacity = "0.5", } = {}) => {
+const createCaptcha = async ({ image = Buffer.from((0, generate_1.backgroundSvg)(sizes.WIDTH, sizes.HEIGHT)), rotate = false, fill = "#000", stroke = "#fff", strokeWidth = "0.4", opacity = "0.5", } = {}) => {
     const seed = (0, generate_1.randInt)();
     const overlay = Buffer.from((0, generate_1.puzzlePieceSvg)({
         rotate,
-        distort,
         fill,
         stroke,
         strokeWidth,
@@ -24,7 +23,6 @@ const createCaptcha = async ({ image = Buffer.from((0, generate_1.backgroundSvg)
     }));
     const mask = Buffer.from((0, generate_1.puzzlePieceSvg)({
         rotate,
-        distort,
         seed,
         strokeWidth,
         fill: "#fff",
@@ -33,7 +31,6 @@ const createCaptcha = async ({ image = Buffer.from((0, generate_1.backgroundSvg)
     }));
     const outline = Buffer.from((0, generate_1.puzzlePieceSvg)({
         rotate,
-        distort,
         seed,
         stroke,
         strokeWidth,

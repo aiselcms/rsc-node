@@ -10,7 +10,6 @@ const sizes = {
 
 const createCaptcha = async ({
   image = Buffer.from(backgroundSvg(sizes.WIDTH, sizes.HEIGHT)),
-  distort = false,
   rotate = false,
   fill = "#000",
   stroke = "#fff",
@@ -25,7 +24,6 @@ const createCaptcha = async ({
   const overlay = Buffer.from(
     puzzlePieceSvg({
       rotate,
-      distort,
       fill,
       stroke,
       strokeWidth,
@@ -37,7 +35,6 @@ const createCaptcha = async ({
   const mask = Buffer.from(
     puzzlePieceSvg({
       rotate,
-      distort,
       seed,
       strokeWidth,
       fill: "#fff",
@@ -48,7 +45,6 @@ const createCaptcha = async ({
   const outline = Buffer.from(
     puzzlePieceSvg({
       rotate,
-      distort,
       seed,
       stroke,
       strokeWidth,

@@ -103,7 +103,7 @@ const puzzlePieceSvg = ({
   stroke = "#fff",
   seed = 0,
   opacity = "0.5",
-  strokeWidth = "0.25",
+  strokeWidth = "0.5",
 } = {}): string => {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
                 <defs>

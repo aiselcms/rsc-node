@@ -112,7 +112,7 @@ const puzzlePieceSvg = ({
                             stroke: ${stroke};
                             fill: ${fill};
                             stroke-width: ${strokeWidth};
-                            stroke-linejoin: "round";
+                            stroke-linejoin: round;
                             opacity: ${opacity};
                         }
                     </style>

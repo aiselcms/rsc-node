@@ -14,7 +14,7 @@ const createCaptcha = async ({
   rotate = false,
   fill = "#000",
   stroke = "#fff",
-  strokeWidth = ".4",
+  strokeWidth = "0.4",
   opacity = "0.5",
 } = {}): Promise<{
   data: { background: string; slider: string };

@@ -96,7 +96,7 @@ const backgroundSvg = (
                   width / 2
                 }" height="${height}" x="${width / 2}" fill="${scheme[3]}"/>
                 ${svgGridPattern(width, height, gridWidth, gridHeight, scheme)}
-     */
+
   return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
                 <image
                     width="${width}"
@@ -104,8 +104,9 @@ const backgroundSvg = (
                     xlink:href="data:img/png;base64,${
                       Backgounds[Math.floor(Math.random() * Backgounds.length)]
                     }
-                    "/> 
-            </svg>`;
+                    "/>
+            </svg>`*/
+  return Backgounds[Math.floor(Math.random() * Backgounds.length)];
 };
 const puzzlePieceSvg = ({
   rotate = false,

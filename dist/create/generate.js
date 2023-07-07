@@ -37,13 +37,7 @@ const svgGridPattern = (width, height, gridWidth, gridHeight, scheme) => {
     return matrix.map((line) => line.join("")).join("");
 };
 const backgroundSvg = (width, height, { gridWidth = randInt(5, 50), gridHeight = randInt(5, 50), scheme = randScheme(randInt(0, 360)), seeds = [randInt(), randInt()], } = {}) => {
-    return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
-                <image
-                    width="${width}"
-                    height="${height}"
-                    xlink:href="data:img/png;base64,${backs_1.Backgounds[Math.floor(Math.random() * backs_1.Backgounds.length)]}
-                    "/> 
-            </svg>`;
+    return backs_1.Backgounds[Math.floor(Math.random() * backs_1.Backgounds.length)];
 };
 exports.backgroundSvg = backgroundSvg;
 const puzzlePieceSvg = ({ rotate = false, fill = "#000", stroke = "#fff", seed = 0, opacity = "0.5", strokeWidth = "0.5", } = {}) => {

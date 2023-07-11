@@ -8,6 +8,11 @@ const sizes = {
   PADDING: 20,
 };
 
+export interface RCCreateResult {
+  data: { background: string; slider: string };
+  solution: number;
+}
+
 const createCaptcha = async ({
   image = Buffer.from(backgroundSvg(sizes.WIDTH, sizes.HEIGHT), "base64"),
   rotate = false,
@@ -15,10 +20,7 @@ const createCaptcha = async ({
   stroke = "#fff",
   strokeWidth = "0.4",
   opacity = "0.5",
-} = {}): Promise<{
-  data: { background: string; slider: string };
-  solution: number;
-}> => {
+} = {}): Promise<RCCreateResult> => {
   const seed = randInt();
 
   const overlay = Buffer.from(

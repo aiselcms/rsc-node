@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
+import {RCCreateResult} from "../create";
 
 export type Trail = {
   x: number[];
@@ -10,7 +11,7 @@ export type CaptchaRequest = {
   trail: Trail;
 };
 
-export type VerifyResult = {
+export type RCVerifyResult = {
   result: boolean;
   token?: string;
 };
@@ -62,7 +63,7 @@ const verifyCaptcha = (
   trueAnswer: number,
   captchaResult: CaptchaRequest,
   options: Options = { tolerance: 7, verify: verifyResponse }
-): VerifyResult => {
+): RCVerifyResult => {
   if (
     options.verify(
       trueAnswer,

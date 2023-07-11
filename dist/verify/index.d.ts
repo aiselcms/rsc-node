@@ -1,2 +1,1 @@
-import verify from "./verify";
-export default verify;
+export { default as verify, RCVerifyResult } from "./verify";

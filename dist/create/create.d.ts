@@ -1,10 +1,10 @@
-export interface RCCreateResult {
+export type RCCreateResult = {
     data: {
         background: string;
         slider: string;
     };
     solution: number;
-}
+};
 declare const createCaptcha: ({ image, rotate, fill, stroke, strokeWidth, opacity, }?: {
     image?: Buffer;
     rotate?: boolean;

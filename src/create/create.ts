@@ -8,10 +8,10 @@ const sizes = {
   PADDING: 20,
 };
 
-export interface RCCreateResult {
+export type RCCreateResult = {
   data: { background: string; slider: string };
   solution: number;
-}
+};
 
 const createCaptcha = async ({
   image = Buffer.from(backgroundSvg(sizes.WIDTH, sizes.HEIGHT), "base64"),
